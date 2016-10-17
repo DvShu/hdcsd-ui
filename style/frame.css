@@ -1,0 +1,299 @@
+/** 
+  * 框架样式
+  * @author: haoran.shu
+  * @date: 2016/8/10
+  */
+* {
+	box-sizing: border-box;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	color: #797979;
+	font-size: 15px;
+}
+
+ul {
+	list-style: none;
+}
+/* 头部样式 */
+.header {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #42425d;
+	border-bottom: 1px solid black;
+	padding: 0 15px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+a.title {
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	margin-top: 15px;
+	float: left;
+}
+
+ul.top-menu {
+	list-style: none;
+	float: right;
+}
+
+ul.top-menu>li>.btn-logout {
+	font-size: 12px;
+	color: #f2f2f2;
+	background-color: #36BC9B;
+	padding: 5px 15px;
+	border: 1px solid #64c3c2;
+	border-radius: 4px;
+	outline: none;
+}
+
+ul.top-menu>li>.btn-logout:hover {
+	background-color: transparent;
+	border-color: #b6b6b6;
+	color: #b6b6b6;
+}
+/* 头部样式: end */
+
+/* 左边侧边栏菜单样式 */
+.slidebar {
+	width: 210px;
+	height: 100%;
+	background-color: #42425d;
+	overflow: hidden;
+	position: fixed;
+	z-index: 0;
+}
+
+ul.slidebar-menu {
+	margin: 0;
+	padding: 0;
+	margin-top: 75px;
+}
+
+ul.slidebar-menu li {
+	padding: 0 0 5px 0;
+}
+
+ul.slidebar-menu>li:nth-of-type(1) {
+	text-align: center;
+}
+
+.slidebar h5 {
+	color: #f2f2f2;
+	font-size: 14px;
+}
+
+.img-circle {
+	width: 60px;
+	border-radius: 50%;
+}
+
+.slidebar a {
+	display: block;
+	color: #aeb2b7;
+	font-size: 12px;
+	outline: none;
+	text-decoration: none;
+	padding: 15px 0 15px 10px;
+	cursor: default;
+}
+
+ul.slidebar-menu>li>a:hover,ul.slidebar-menu>li>a.active {
+	background-color: #36BC9B;
+	color: #ffffff;
+}
+
+ul.submenu {
+	display: none;
+}
+
+ul.submenu a {
+	padding: 5px 0;
+}
+
+ul.submenu>li>a:hover {
+	color: #ffffff;
+}
+
+ul.submenu>li>a.active {
+	color: #36BC9B;
+}
+/* 左边菜单栏：end */
+
+/* 常用容器栏样式:start */
+/* 顶层布局,一般放在body下面,其它内容放入它的里面 */
+.container {
+	width: 100%;
+	height: 100%;
+}
+/* 主要内容部分样式 */
+.main-content {
+	width: 100%;
+	height: 100%;
+	padding-top: 60px; /*间隔一个头部的高度(.header)*/
+	padding-left: 210px; /*间隔一个左边菜单栏宽度(.slidebar)*/
+}
+.wrapper {
+	padding: 20px;
+}
+/* 带100%宽度的容器 */
+.content-panel {
+	width: 100%;
+	background-color: white;
+	border: 1px solid white; /* 设置边框,避免出现margin合并现象 */
+	box-shadow: 2px 2px 2px 2px grey; /* 添加一个边框阴影效果 */
+}
+/* 不带宽度的容器 */
+.content-panel0 {
+	background-color: white;
+	border: 1px solid white; /* 设置边框,避免出现margin合并现象 */
+	box-shadow: 2px 2px 2px 2px grey; /* 添加一个边框阴影效果 */
+}
+/* 使用table实现垂直居中 */
+.table-layout {
+	display: table;
+}
+/* 内容垂直和水平居中 */
+.table-cell-center {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* 常用容器样式：end */
+
+/* table表格样式 */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 10px 0;
+}
+
+.table th,.table td {
+	padding: 8px 5px;
+	text-align: center;
+}
+
+.table th {
+	border-bottom: 2px solid #dddddd;
+}
+
+.table td {
+	border-top: 1px solid #dddddd;
+}
+.a {
+	text-decoration: none;
+	color: #5988DD;
+}
+/* table表格样式：end */
+
+/* form组件标签样式 */
+input {
+	width: 130px;
+	padding: 7px 0;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #36BC9B;
+	outline: none;
+}
+.input {
+	text-align: left;
+	padding: 7px 5px;
+}
+
+select {
+	min-width: 130px;
+	color: #36BC9B;
+	border: 1px solid #36BC9B;
+	border-radius: 4px;
+	padding: 5px 0;
+	outline: none;
+}
+
+button {
+	padding: 7px 30px;
+	background-color: #36BC9B;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	color: white
+}
+
+button:hover {
+	background-color: #57D2B4;
+}
+
+button:active {
+	background-color: #2AA98A;
+}
+.button {
+	width: auto;
+	padding: 7px 30px;
+	background-color: white;
+	border: 1px solid #36BC9B;
+	border-radius: 30px;
+	outline: none;
+	color: #36BC9B
+}
+/* form组件标签样式：end */
+
+/* 浮动样式: start */
+.clearfix::after {
+	content: "."; /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+	display: block; /*加入的这个元素转换为块级元素。*/
+	clear: both; /*清除左右两边浮动。*/
+	visibility: hidden;
+	/*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+	line-height: 0; /*行高为0；*/
+	height: 0; /*高度为0；*/
+	font-size: 0; /*字体大小为0；*/
+}
+
+.clearfix {
+	*zoom: 1;
+}
+/* 左浮动 */
+.pull-left {
+	float: left
+}
+/* 右浮动 */
+.pull-right {
+	float: right
+}
+/* 浮动样式: end */
+
+/* IconFont */
+/* IconFont字体,使用cdn,每次图标更新后,都需要重新获取一次该字体 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1475999454_7263541.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1475999454_7263541.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1475999454_7263541.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1475999454_7263541.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1475999454_7263541.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+/* 定义使用字体图标的样式 */
+.iconfont {
+	font-family: "iconfont";
+	font-size: 12px;
+	font-style:normal;
+	/* 设置字体抗锯齿 */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-stroke-width: 0.2px; /* 设置边缘模糊 */
+}
+/* IconFont: end */
