@@ -6,12 +6,6 @@
 * {
 	box-sizing: border-box;
 }
-
-html,body {
-	width: 100%;
-	height: 100%;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -149,24 +143,14 @@ ul.submenu>li>a.active {
 .wrapper {
 	padding: 20px;
 }
-/* 带100%宽度的容器 */
+/* 容器 */
 .content-panel {
-	width: 100%;
 	background-color: white;
 	border: 1px solid white; /* 设置边框,避免出现margin合并现象 */
 	box-shadow: 2px 2px 2px 2px grey; /* 添加一个边框阴影效果 */
 }
-/* 不带宽度的容器 */
-.content-panel0 {
-	background-color: white;
-	border: 1px solid white; /* 设置边框,避免出现margin合并现象 */
-	box-shadow: 2px 2px 2px 2px grey; /* 添加一个边框阴影效果 */
-}
-/* 使用table实现垂直居中 */
-.table-layout {
-	display: table;
-}
-/* 内容垂直和水平居中 */
+
+/* 使用table实现内容垂直和水平居中 */
 .table-cell-center {
 	display: table-cell;
 	vertical-align: middle;
@@ -195,7 +179,7 @@ ul.submenu>li>a.active {
 .table td {
 	border-top: 1px solid #dddddd;
 }
-.a {
+.table .a {
 	text-decoration: none;
 	color: #5988DD;
 }
@@ -242,11 +226,8 @@ button:active {
 }
 .button {
 	width: auto;
-	padding: 7px 30px;
 	background-color: white;
 	border: 1px solid #36BC9B;
-	border-radius: 30px;
-	outline: none;
 	color: #36BC9B
 }
 /* form组件标签样式：end */

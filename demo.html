@@ -5,10 +5,85 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>恒大车时代 -- UI 整理</title>
 	<link rel="stylesheet" href="style/frame.css">
+	<style>
+		.group1 {
+			width: 500px;
+			height: 200px;
+			background-color: blue;
+			color: white;
+			text-align: center;
+		}
+		
+		.group1 .child {
+			width: 100px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
   </head>
   <body>
+	<!-- 所有的其它样式放置在 class="container" 的标签里面 -->
     <section class="container">
-	  ddddssdfasad
+	  <!-- 如果需要初始实现头部和侧边栏菜单,则所有的主要内容样式应该放置于 class="main-content里面" -->
+	  <div class="wrapper">
+		<h3>容器</h3>
+		<div class="content-panel wrapper">容器</div>
+		<h3>浮动</h3>
+		<div class="clearfix group1">
+			<div class="pull-right child">右浮动</div>
+			<div class="pull-left child">左浮动</div>
+		</div>
+		<h3>form表单组件</h3>
+		<form action="#">
+			<label>水平居中： </label><input type="text" placeholder="用户名"><br><br>
+			<label>靠&nbsp;&nbsp;左： </label><input type="text" placeholder="邮箱" class="input"><br><br>
+			<label>科&nbsp;&nbsp;目：</label>
+			<select>
+				<option>请选择</option>
+				<option>语文</option>
+				<option>数学</option>
+				<option>英语</option>
+			</select><br><br>
+			<button type="submit">确定</button><button type="reset" class="button">重置</button>
+		 </form>
+		 <h3>文本垂直居中</h3>
+		 <div class="group1 table-cell-center">
+			<label>第一段</label>
+			<label>测试<br>第二段</label>
+		 </div>
+		 <h3>表格</h3>
+		 <table class="table">
+			<thead>
+				<tr>
+					<th>标题1</th>
+					<th>标题2</th>
+					<th>标题3</th>
+					<th>链接</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>第1行第1列</td>
+					<td>第1行第2列</td>
+					<td>第1行第3列</td>
+					<td><a href="#" class="a">链接1</a></td>
+				</tr>
+				<tr>
+					<td>第2行第1列</td>
+					<td>第2行第2列</td>
+					<td>第2行第3列</td>
+					<td><a href="#" class="a">链接2</a></td>
+				</tr>
+				<tr>
+					<td>第3行第1列</td>
+					<td>第3行第2列</td>
+					<td>第3行第3列</td>
+					<td><a href="#" class="a">链接3</a></td>
+				</tr>
+			</tbody>
+		 </table>
+	  </div>
+	  
 	</section>
   </body>
 </html>
