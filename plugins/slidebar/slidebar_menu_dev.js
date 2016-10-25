@@ -3,7 +3,6 @@
  * 
  * @author haoran.shu
  */
-;(function(window) {
 	// 构造导航栏对象
 	var SlidebarMenu = function(n) {
 		initMenu(n); // 初始化菜单
@@ -75,4 +74,3 @@
 	};
 
 	window.slidebarMenu = SlidebarMenu; // 添加侧边栏导航菜单对象
-})(window);
