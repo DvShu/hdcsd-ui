@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>UI 整理(带头部和侧边栏菜单)</title>
+	<!-- 所有的图标库都是用的iconfont,引入图标库样式 -->
+	<link rel="stylesheet" href="style/iconfont/iconfont.css">
+	<!-- 引入框架样式表 -->
+	<link rel="stylesheet" href="style/frame.css">
+	<style>
+		.head-img {
+			font-size: 32px;
+			color: white;
+		}
+	</style>
+  </head>
+  <body>
+    <!-- 所有的内容都应该放置到 container 里面 -->
+	<div class="container">
+	  <!-- 头部 -->
+	  <div class="header">
+    	<a class="title"><b>恒大车时代运营平台</b></a>
+	    <ul class="top-menu">
+	    	<li><button class="btn-logout" onclick="javascript:">登出</button></li>
+	    </ul>
+      </div>
+	  <!-- 左边侧边栏菜单 -->
+	  <div class="slidebar">
+			<!-- 头像部分 -->
+			<div style="text-align: center">
+				<i class="iconfont icon-yonghu head-img"></i>
+    			<h5>恒大车时代</h5>
+			</div>
+    		<!-- id属性必填,因为 slidebar.js 插件会根据id属性来进行初始化配置,并且规范格式也应该保持一致,ul-li格式 -->
+    		<ul id="slidebar-menu" class="slidebar-menu">
+    			<li>
+    				<a>
+    					<i class="iconfont icon-yonghu"></i>
+    					<span>用户管理</span>
+    				</a>
+					<!-- 子菜单 -->
+    				<ul class="submenu" >
+    					<li><a href="#">用户查询</a></li>
+    					<li><a href="#">用户二维码</a></li>
+    				</ul>
+    			</li>
+    			<li>
+    				<a>
+    					<i class="iconfont icon-xiazai"></i>
+    					<span>下载管理</span>
+    				</a>
+    				<ul class="submenu" >
+    					<li><a href="#">下载列表</a></li>
+                        <li><a href="#">新建下载</a></li>
+    				</ul>
+    			</li>
+    		</ul>
+    	</div>
+		<!-- 主要内容部分 -->
+		<div class="main-content">
+		  <!-- 为了方便好看，设置了子内容内边距为20px -->
+		  <div class="wrapper">主要内容部分……</div>
+		</div>
+	</div>
+	<!-- 侧边栏菜单插件 -->
+	<script src="plugins/slidebar/slidebar-menu.js"></script>
+	<script>
+		/* 
+			配置当前显示的是哪一项菜单的内容
+			参数为数组类型, 第一个元素代表一级菜单,第2个元素代表2级菜单，依次往后类推……
+			数值从0开始，0代表第一个菜单项，1代表第2个菜单项……
+		*/
+		slidebarMenu([0, 0]);
+	</script>
+  </body>
+</html>
